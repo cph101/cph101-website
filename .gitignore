@@ -9,3 +9,7 @@ latest.log
 CNAME
 yarn.lock
 sec/
+/.breakpoints
+/.cache
+/.idea
+/.upm
