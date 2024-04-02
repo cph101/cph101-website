@@ -31,12 +31,17 @@
     "@tailwindcss/aspect-ratio": "^0.4.2",
     "@tailwindcss/forms": "^0.5.7",
     "@uiw/react-markdown-preview": "^5.0.3",
+    "clsx": "^2.1.0",
     "colors": "^1.4.0",
     "firebase": "^10.7.1",
+    "framer-motion": "^11.0.24",
     "mermaid": "^10.6.1",
+    "react-head": "^3.4.2",
+    "react-iframe": "^1.8.5",
     "react-router-dom": "^6.20.1",
     "rehype-rewrite": "^4.0.2",
     "sass": "^1.69.5",
+    "tailwind-merge": "^2.2.2",
     "three": "^0.132.2"
   }
 }
