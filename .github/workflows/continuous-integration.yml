@@ -73,7 +73,7 @@ jobs:
         run: npm install
 
       - name: Compile CSS
-        run: npx tailwindcss -i ./src/main.scss -o ./src/compiled.scss
+        run: npm run css
 
       - name: Build project
         run: npm run build
