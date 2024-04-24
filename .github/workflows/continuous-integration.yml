@@ -85,7 +85,7 @@ jobs:
         uses: actions/configure-pages@v3
 
       - name: Upload build files
-        uses: actions/upload-pages-artifact@v4.3.3
+        uses: actions/upload-pages-artifact@v3.0.1
         with:
           name: Compiled site
           path: ./dist
