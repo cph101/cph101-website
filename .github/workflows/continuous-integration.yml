@@ -46,7 +46,7 @@ jobs:
         run: echo "CURRENT_DATE=$(date +'%Y-%m-%d %H:%M:%S')" >> $GITHUB_OUTPUT
 
       - name: Save source
-        uses: actions/cache/save@v3
+        uses: actions/cache/save@v4.0.2
         with:
           path: ./src
           key: decrypted-source-${{ steps.get_date.outputs.CURRENT_DATE }}
@@ -64,7 +64,7 @@ jobs:
         uses: actions/setup-node@v4.0.0
         
       - name: Restore cached source
-        uses: actions/cache/restore@v3
+        uses: actions/cache/restore@v4
         with:
           path: ./src
           key: decrypted-source-${{ needs.decrypt.outputs.current_date }}
@@ -85,7 +85,7 @@ jobs:
         uses: actions/configure-pages@v3
 
       - name: Upload build files
-        uses: actions/upload-pages-artifact@v2.0.0
+        uses: actions/upload-pages-artifact@v4.3.3
         with:
           name: Compiled site
           path: ./dist
