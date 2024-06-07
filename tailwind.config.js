@@ -11,6 +11,12 @@ export default {
         fourth: "moveHorizontal 40s ease infinite",
         fifth: "moveInCircle 20s ease infinite",
       },
+      boxShadow: {
+        'mcbutton': "inset -2px -4px #0006, inset 2px 2px #FFF7"
+      },
+      colors: {
+        'forest': "#18a05a"
+      },
       keyframes: {
         moveHorizontal: {
           "0%": {
