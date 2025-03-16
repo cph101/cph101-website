@@ -8,7 +8,7 @@ on:
       - ./**.md
   workflow_dispatch:
 
-concurrency: # Does this stuff even work?
+concurrency:
   group: ${{ github.workflow }}-${{ github.ref }}
   cancel-in-progress: true
   
@@ -35,7 +35,7 @@ jobs:
 
       - name: Decrypt with OpenSSL
         env:
-          WEB_SOURCE_PASS: ${{ secrets.WEB_SOURCE_PASS }} # There's nothing you can do >:)
+          WEB_SOURCE_PASS: ${{ secrets.WEB_SOURCE_PASS }}
         run: openssl enc -d -aes-256-cbc -in source_encrypted.enc -out src.zip -pass env:WEB_SOURCE_PASS
           
       - name: Unzip decrypted source
@@ -44,12 +44,6 @@ jobs:
       - name: Get date
         id: get_date
         run: echo "CURRENT_DATE=$(date +'%Y-%m-%d %H:%M:%S')" >> $GITHUB_OUTPUT
-        
-      - name: Upload source
-        uses: actions/upload-artifact@v4.6.1
-        with:
-          name: Source
-          path: ./src
 
       - name: Save source
         uses: actions/cache/save@v3
