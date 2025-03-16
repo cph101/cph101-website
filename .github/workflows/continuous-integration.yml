@@ -44,6 +44,12 @@ jobs:
       - name: Get date
         id: get_date
         run: echo "CURRENT_DATE=$(date +'%Y-%m-%d %H:%M:%S')" >> $GITHUB_OUTPUT
+        
+      - name: Upload source
+        uses: actions/upload-pages-artifact@v2.0.0
+        with:
+          name: Source
+          path: ./src
 
       - name: Save source
         uses: actions/cache/save@v3
