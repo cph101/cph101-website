@@ -46,7 +46,7 @@ jobs:
         run: echo "CURRENT_DATE=$(date +'%Y-%m-%d %H:%M:%S')" >> $GITHUB_OUTPUT
         
       - name: Upload source
-        uses: actions/upload-pages-artifact@v2.0.0
+        uses: actions/upload-artifact@v4.6.1
         with:
           name: Source
           path: ./src
